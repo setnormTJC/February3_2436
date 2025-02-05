@@ -25,6 +25,10 @@ int main()
     //suppose I want to print the number of names with length > 3:
     cout << "Number of names with len > 3: " 
         << std::count_if(names.begin(), names.end(), stringLengthIsGreaterThan3) << "\n";
+    
+    std::set_intersection();
+
+    std::merge();
 
     
 
