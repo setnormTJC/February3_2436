@@ -33,14 +33,32 @@ int main()
 {
 	vector<string> names =
 	{
-		"Alice",
-		"Carol",
-		"Bob", 
-		"Darth", 
-		"Eve"
+		"innovation",
+		"ton",
+		"first",
+		"inappropriate",
+		"jury",
+		"retailer",
+		"interrupt",
+		"shallow",
+		"technique",
+		"death"	
 	};
 
-	demoMonkeySort(names); 
+	for (int i = 0; i < 90; ++i)
+	{
+		names.push_back(std::to_string(i)); 
+	}
+
+	naiveSort(names); 
+	//for N = 100, 4950 comparisons will be done
+	//NOTE that sum (i) from i = 0 to N = N(N-1)/2 (an equation from "math class") 
+	//and N(N - 1)/2 ~= N^2
+
+
+	//MiracleSort(names); 
+
+	//demoMonkeySort(names); 
 
 	//so how much better is the `naiveSort`? 
 	//naiveSort(names); 

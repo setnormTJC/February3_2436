@@ -11,6 +11,7 @@ using std::cout, std::is_sorted, std::string, std::vector;
 using std::mt19937, std::random_device;
 
 
+/*O(infinity) */
 void MiracleSort(vector<string>& strings);
 
 /*
@@ -29,5 +30,8 @@ This algorithm has O(N^2) complexity in the average case.
 @param this overload takes STRINGS
 */
 void naiveSort(vector<string>& vectorOfStrings);
+
+
+quickSort(vector<string>& vectorOfStrings);
 
 void printVec(const vector<string> strings);

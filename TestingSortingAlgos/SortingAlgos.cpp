@@ -33,18 +33,28 @@ int MonkeySort(vector<string>& strings)
 
 void naiveSort(vector<string>& vectorOfStrings)
 {
+	int comparisonCounter = 0; 
+	int swapCounter = 0; 
+
 	for (int outer = 0; outer < vectorOfStrings.size() - 1; ++outer)
 	{
 		for (int inner = outer + 1; inner < vectorOfStrings.size(); ++inner)
 		{
-			if (vectorOfStrings[inner] < vectorOfStrings[outer])
-			{
-				std::swap(vectorOfStrings[inner], vectorOfStrings[outer]);
+			comparisonCounter++; 
 
-				printVec(vectorOfStrings); 
+			if (vectorOfStrings[inner] < vectorOfStrings[outer]) //our comparison operation 
+			{
+				std::swap(vectorOfStrings[inner], vectorOfStrings[outer]); //our swap op. 
+				swapCounter++; 
+
+				//printVec(vectorOfStrings); 
 			}
 		}
-	}
+	} //end outer loop 
+	
+	cout << "TOTAL comparisons: " << comparisonCounter << "\n";
+	cout << "Total SWAPS: " << swapCounter << "\n";
+
 }
 
 
